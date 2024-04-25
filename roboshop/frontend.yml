@@ -1,10 +1,10 @@
-- name: setting up frontend webpage
+- name: Setup Frontend
   hosts: all
-  task :
-   - name: Installing NGINX
-     ansible.builtin.yum:
-      name: nginx
-      state: latest
+  tasks:
+    - name: Installing NGINX
+      ansible.builtin.yum:
+        name: nginx
+        state: latest
 
 
 
