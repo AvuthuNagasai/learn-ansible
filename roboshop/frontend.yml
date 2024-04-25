@@ -1,4 +1,4 @@
-- name: setting up frontend
+- name: setting up frontend webpage
   hosts: all
   task :
    - name: Installing NGINX
