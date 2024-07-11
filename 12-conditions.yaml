@@ -18,3 +18,11 @@
     - name: say Hello
       ansible.builtin.debug:
           msg: "Hello"
+
+#TASK [check if user exists or not] **********************************************************************************************************************************************************
+#fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["id", "expense"], "delta": "0:00:00.011319", "end": "2024-07-11 10:28:47.890060", "msg": "non-zero return code", "rc": 1, "start": "2024-07-11 10:28:47.878741", "stderr": "id: ‘expense’: no such user", "stderr_lines": ["id: ‘expense’: no such user"], "stdout": "", "stdout_lines": []}
+#...ignoring
+
+
+#rc=1 means there is an error, so we are writing a condition  when rc is not equal to 0 then add user
+#if user is added then we wil get 0
