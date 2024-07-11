@@ -3,8 +3,8 @@
   become: yes
   vars:
     course: "Devops"
-    Trainer: "Siva"
-    Duration: "120hrs"
+    trainer: "Siva"
+    duration: "120hrs"
     wishes: "Good Luck!!"
 
   tasks:
