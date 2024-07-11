@@ -1,0 +1,6 @@
+- name: variables from prompt
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: print information
+      msg: "Hi, Welcome to {{course}} from {{trainer}} and duration is {{duration}}. {{wishes}}!"
