@@ -1,7 +1,19 @@
-- name: variables from prompt
+- name: variables from inventory
   hosts: localhost
-  become: yes
   tasks:
-   - name: print information
-     ansible.builtin.debug:
-       msg: "Hi, Welcome to {{course}} from {{trainer}} and duration is {{duration}}. {{wishes}}!"
+    - name: print information
+      vars:
+        timings: "07:15AM IST"
+      ansible.builtin.debug:
+        msg: "Hi, We are learning {{course}} from Trainer {{trainer}}, Duration is {{duration}}. Timings are: {{timings}}"
+
+
+
+
+#- name: variables from prompt
+#  hosts: localhost
+#  become: yes
+#  tasks:
+##   - name: print information
+#     ansible.builtin.debug:
+#       msg: "Hi, Welcome to {{course}} from {{trainer}} and duration is {{duration}}. {{wishes}}!"
