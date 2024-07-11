@@ -1,0 +1,6 @@
+- name: vars from arguements
+  hosts: localhost
+  tasks:
+    - name: get from args
+      ansible.builtin.debug:
+        msg: "Hello {{person}} welcome to thr course {{course}}"
