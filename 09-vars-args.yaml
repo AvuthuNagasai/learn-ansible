@@ -4,3 +4,7 @@
     - name: get from args
       ansible.builtin.debug:
         msg: "Hello {{person}} Good {{wishes}}, welcome to thr course {{course}}"
+
+
+# ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321  09-vars-args.yaml -e "person=nani wishes=morning course=AWS"
+#variable declared: 09-vars-args.yaml -e "person=nani wishes=morning course=AWS"
