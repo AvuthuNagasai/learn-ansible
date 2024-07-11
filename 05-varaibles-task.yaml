@@ -10,7 +10,7 @@
   tasks:
   - name: print override information
     vars:
-       couse: "AWS"
+       course: "AWS"
        trainer: "raghu"
        duration: "80hrs"
     ansible.builtin.debug:
