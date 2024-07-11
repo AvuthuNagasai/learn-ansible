@@ -1,9 +1,10 @@
+#- name: variables from files
 - name: variables from files
   hosts: localhost
   become: yes
   vars:
     vars.yml
-  task:
+  tasks:
     - name: print information
       ansible.builtin.debug:
         msg: "Hi, Welcome to {{course}} from {{trainer}} and duration is {{duration}}. {{wishes}}! "
