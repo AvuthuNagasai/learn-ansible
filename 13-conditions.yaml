@@ -1,0 +1,25 @@
+- name: conditions using prompt
+  hosts: localhost
+  become: yes
+
+  vars_prompt:
+    - name: number
+      prompt: enter a number
+      private: false
+
+  tasks:
+      - name: check if number is gt 10
+        ansible.builtin.debug:
+         msg: given {{number}} is less than 10
+         when: number | int < 10
+
+
+      - name: check if number is gt 10
+        ansible.builtin.debug:
+          msg: given {{number}} is greater than 10
+          when: number | int > 10
+
+      - name: check if number is et 10
+        ansible.builtin.debug:
+          msg: given {{number}} is  equal to 10
+          when: number | int = 10
