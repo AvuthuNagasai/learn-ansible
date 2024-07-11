@@ -14,7 +14,7 @@
       aws: 3
       linux: 4
       terraform: 1
-    Realproject: true
+    Realproject: true #boolean
   tasks:
     - name: print variables
       ansible.builtin.debug:
